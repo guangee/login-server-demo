@@ -1,0 +1,13 @@
+version: '3'
+services:
+  manager:
+    restart: always
+    image: login_0608:1.0
+    ports:
+      - "8888:8080/tcp"
+    environment:
+      - db_host=localhost
+      - db_name=demo
+      - db_port=3306
+      - db_username=root
+      - db_password=root

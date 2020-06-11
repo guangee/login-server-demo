@@ -1,0 +1,44 @@
+server:
+  tomcat:
+    acceptCount: 1000
+    accesslog:
+      buffered: true
+    maxConnections: 100
+    maxThreads: 500
+spring:
+  jackson:
+    dateFormat: yyyy-MM-dd HH:mm:ss # 对返回的时间格式化
+    timeZone: GMT+8 # 时区设置
+    defaultPropertyInclusion: non_null
+  freemarker:
+    suffix: .ftl
+    requestContextAttribute: ctx
+  cache:
+    type: redis
+  servlet:
+    multipart:
+      max-file-size: 100MB
+      max-request-size: 500MB
+  jpa:
+    hibernate:
+      ddl-auto: update
+swagger:
+  enabled: true
+  base-package: com.coding.controller
+app:
+  app-id: ${appId:1}
+
+
+logging:
+  level:
+    com.coding: info
+    com.coding.mapper: debug
+mapper:
+  mappers:
+    - tk.mybatis.mapper.common.Mapper
+mybatis:
+  configuration:
+    map-underscore-to-camel-case: true
+    use-generated-keys: true
+    use-column-label: true
+  mapper-locations: mapper/*.xml
