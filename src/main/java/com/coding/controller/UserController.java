@@ -4,26 +4,13 @@ import com.coding.common.Const;
 import com.coding.domain.User;
 import com.coding.mapper.UserMapper;
 import com.coding.service.UserService;
-import com.google.common.cache.Cache;
-import com.google.common.cache.CacheBuilder;
-import com.guanweiming.common.utils.NumberUtil;
 import com.guanweiming.common.utils.Result;
-import io.minio.errors.*;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.client.RestTemplate;
-import org.springframework.web.multipart.MultipartFile;
-
-import java.io.IOException;
-import java.security.InvalidKeyException;
-import java.security.NoSuchAlgorithmException;
 import java.util.List;
-import java.util.Objects;
-import java.util.concurrent.TimeUnit;
 
 /**
  * @author guanweiming
