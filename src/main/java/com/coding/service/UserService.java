@@ -43,7 +43,7 @@ public class UserService {
     }
 
 
-    public Result<User> addUser(String username, String password) {
+    public Result<User> addUser(String username, String password, String nickname) {
         User record = new User();
         record.setUsername(username);
         List<User> list = userMapper.select(record);
@@ -51,6 +51,7 @@ public class UserService {
             return Result.createByErrorMessage("用户已经存在，无法添加");
         }
         record.setPassword(password);
+        record.setNickname(nickname);
         int resultCount = userMapper.insertSelective(record);
         return resultCount == 0 ? Result.createByErrorMessage("添加失败") : Result.createBySuccess(record);
     }

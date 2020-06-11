@@ -38,8 +38,8 @@ public class UserController {
     @ApiOperation("注册用户接口")
     @PostMapping("register")
     public Result<User> register(@RequestParam String username,
-                                 @RequestParam String password, String code) {
-        return userService.addUser(username, password);
+                                 @RequestParam String password, String nickname) {
+        return userService.addUser(username, password,nickname);
     }
 
 
