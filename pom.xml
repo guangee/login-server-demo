@@ -197,10 +197,6 @@
             <url>http://maven.aliyun.com/nexus/content/groups/public/</url>
         </repository>
         <repository>
-            <id>maven-repo</id>
-            <url>https://raw.githubusercontent.com/zziaguan/maven/master</url>
-        </repository>
-        <repository>
             <id>repo1</id>
             <url>https://repo1.maven.org/maven2/</url>
         </repository>
